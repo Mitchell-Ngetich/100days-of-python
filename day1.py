@@ -67,5 +67,46 @@ from math import *
 # like slice method in JS => takes index 1 element to index 3.
 
 # Tuples => cannot be modified
-cordinates = (4,5)
-print(cordinates[1])
+# cordinates = (4,5)
+# print(cordinates[1])
+
+# Tip calculator
+# bill = 124.56
+# tip = 12
+# num_people = 7
+
+# ans = (bill * 1.12) / num_people
+# # we can use format or round
+# # ans1 = round(ans, 2) => both works the same.
+# ans1 = "{:.2f}".format(ans)
+# print(ans1)
+
+# code challenge
+# age = int(raw_input("What is your age? "))
+# years = int(90 - age)
+# days = int(365 * years)
+# weeks = int(52 * years)
+# months = int(years * 12)
+# message = "you have " + str(days) + " days, " + str(weeks) + " weeks, " + str(months) + " months, " + str(years) + "years."
+# print(message)
+
+# height = raw_input("enter your height in m: ")
+# weight = raw_input("enter your weigh in kg: ")
+
+# answer = (int(weight) / (float(height)) ** 2)
+# print(int(answer))
+
+age = int(input("What is your age? "))
+years = int(90 - int(age))
+months = years * 12
+weeks = years * 52
+days = years * 365
+
+print(f"You have {days} days, {weeks} weeks, and {months} months left.")
+two_digit = input("Type a two digit number: ")
+print(int(two_digit[0]) + int(two_digit[1]))
+print(type(two_digit))
+
+
+# Functions
+
