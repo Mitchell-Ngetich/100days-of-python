@@ -174,5 +174,22 @@
 #     print(f"Your bmi is {bmi}, You are obese")
 # else: print(f"Your bmi is {bmi}, You are clinically obese")
 
+year = int(input("Which years do yo want to check? "))
 
+# if year % 4 == 0:
+#     print("This is a leap year")
+# elif year % 100 == 0 and year % 400 == 0:
+#     print("This year is a leap year")
+# elif year % 4 == 0 and year % 100 != 0:
+#     print("This year is a leap year")
+# elif year % 100 == 0 and year % 400 != 0:
+#     print("This year is not a leap year")
+# else: print("This year is not a leap year")
 
+if year % 4 == 0:
+    if year % 100 == 0:
+        if year % 400 == 0:
+            print("This year is a leap year")
+        else: print("This year is not a leap year")
+    else: print("This year is a leap year")
+else: print("This year is not a leap year")
