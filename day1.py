@@ -192,29 +192,29 @@
 #     else: print("This year is a leap year")
 # else: print("This year is not a leap year")
 
-print("Welcome to the rollercoaster!")
-height = int(input("What is your height in cm? "))
-bill = 0
+# print("Welcome to the rollercoaster!")
+# height = int(input("What is your height in cm? "))
+# bill = 0
 
-if height >= 120:
-    age = int(input("What is your age? "))
-    if age < 12:
-        bill = 3
-        print("pay $3")
-    elif age <= 18:
-        bill = 7
-        print("pay $7")
-    elif age >= 45 and age <= 55 :
-        print("Free ride")
-    else:
-        bill = 12 
-        print("pay $12")
+# if height >= 120:
+#     age = int(input("What is your age? "))
+#     if age < 12:
+#         bill = 3
+#         print("pay $3")
+#     elif age <= 18:
+#         bill = 7
+#         print("pay $7")
+#     elif age >= 45 and age <= 55 :
+#         print("Free ride")
+#     else:
+#         bill = 12 
+#         print("pay $12")
       
-    want_photo = input("Do you wany a photo taken? Y or N ")
-    if want_photo == "Y":
-        bill += 3
-    print(f"Your final ${bill}")
-else: print("Sorry, you can't ride") 
+#     want_photo = input("Do you wany a photo taken? Y or N ")
+#     if want_photo == "Y":
+#         bill += 3
+#     print(f"Your final ${bill}")
+# else: print("Sorry, you can't ride") 
 
 # print("Welcome to Python Pizza Deliveries!")
 # order = input("Do you want to order? Y or N ")
@@ -241,3 +241,26 @@ else: print("Sorry, you can't ride")
 #         bill += 1
 #     print(f"Your cheese is ${bill}")
 # else: print("No order was made")
+
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name? \n").lower()
+name2 = input("What is your name? \n").lower()
+combined = name1 + name2
+
+true = combined.count("t") + combined.count("r") + combined.count("u") + combined.count("e")
+love = combined.count("l") + combined.count("0") + combined.count("v") + combined.count("e") 
+
+print(true)
+print(love)
+love_count =  int(str(true) + str(love))
+# you have to change string into int so you can compare to given inter values
+print(love_count)
+
+if love_count < 10 or love_count > 90:
+    print(f"Your score is {love_count}, you go together like coke and mentos.")
+elif love_count >=40 and love_count <= 50:
+    print(f"Your score is {love_count}, you are alright together")
+else: print(f"your score is {love_count}")
+
+
+
