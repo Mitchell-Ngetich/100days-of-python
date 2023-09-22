@@ -1,4 +1,4 @@
-from math import *
+# from math import *
 #  print("Hello" + " Mitch")
 
 # print("Day 1 - String Manipulation")  
@@ -131,6 +131,48 @@ from math import *
 
 
 # Day 3
+
+# print("Welcome to the rollercoaster!")
+# height = int(input("What is your height in cm? "))
+
+# if height >= 120:
+#     print("You can ride the rollercoaster")
+#     age = int(input("What is your age? "))
+#     if age > 18:
+#         print("Please pay $12.")
+#     elif age >= 12 and age <= 18:
+#         print("Please pay $7.")
+#     else: print("Please pay $5.")
+# else: 
+#     print("You cannot ride the rollercoaster")
+
+
+# number = int(input("Which number do you want wanna divide?  "))
+
+# if number % 2 == 0:
+#     print("This number is an even number")
+# else:
+#     print("This number is an odd number")
+
+# name = raw_input("Enter your name: ")
+
+# print(name)
+
+height = float(input("Enter your height in m: "))
+weight = float(input("Enter your weight in kg: "))
+bmi = round(weight / (height ** 2))
+
+print(bmi)
+
+if bmi < 18.5:
+    print(f"Your bmi is {bmi}, You are underweight.")
+elif bmi < 25:
+    print(f"Your bmi is {bmi}, you have a normal weight")
+elif bmi < 30:
+    print(f"Your bmi is {bmi},you are overweight")
+elif bmi < 35:
+    print(f"Your bmi is {bmi}, You are obese")
+else: print(f"Your bmi is {bmi}, You are clinically obese")
 
 
 
