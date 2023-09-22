@@ -96,17 +96,41 @@ from math import *
 # answer = (int(weight) / (float(height)) ** 2)
 # print(int(answer))
 
-age = int(input("What is your age? "))
-years = int(90 - int(age))
-months = years * 12
-weeks = years * 52
-days = years * 365
+# age = int(input("What is your age? "))
+# years = int(90 - int(age))
+# months = years * 12
+# weeks = years * 52
+# days = years * 365
 
-print(f"You have {days} days, {weeks} weeks, and {months} months left.")
-two_digit = input("Type a two digit number: ")
-print(int(two_digit[0]) + int(two_digit[1]))
-print(type(two_digit))
+# print(f"You have {days} days, {weeks} weeks, and {months} months left.")
+# two_digit = input("Type a two digit number: ")
+# print(int(two_digit[0]) + int(two_digit[1]))
+# print(type(two_digit)) => check if it is a string or an integer 
 
 
 # Functions
+
+# def my_function(name):
+#     print("Hello, how are you feeling today " + name + "?")
+
+# my_function("Mitchell")
+
+# conditional statements
+# is_tall = True
+# is_male = False
+# is_handsome = True
+
+# if is_tall and is_male and is_handsome:
+#     print("I love this Man!")
+# elif is_tall and is_male or is_handsome and is_male:
+#     print("I still love him")
+# else:
+#     print("She is a girlfriend!")
+
+# if statements and comparisons.
+
+
+# Day 3
+
+
 
