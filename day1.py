@@ -242,25 +242,41 @@
 #     print(f"Your cheese is ${bill}")
 # else: print("No order was made")
 
-print("Welcome to the Love Calculator!")
-name1 = input("What is your name? \n").lower()
-name2 = input("What is your name? \n").lower()
-combined = name1 + name2
+# print("Welcome to the Love Calculator!")
+# name1 = input("What is your name? \n").lower()
+# name2 = input("What is your name? \n").lower()
+# combined = name1 + name2
 
-true = combined.count("t") + combined.count("r") + combined.count("u") + combined.count("e")
-love = combined.count("l") + combined.count("0") + combined.count("v") + combined.count("e") 
+# true = combined.count("t") + combined.count("r") + combined.count("u") + combined.count("e")
+# love = combined.count("l") + combined.count("0") + combined.count("v") + combined.count("e") 
 
-print(true)
-print(love)
-love_count =  int(str(true) + str(love))
-# you have to change string into int so you can compare to given inter values
-print(love_count)
+# print(true)
+# print(love)
+# love_count =  int(str(true) + str(love))
+# # you have to change string into int so you can compare to given inter values
+# print(love_count)
 
-if love_count < 10 or love_count > 90:
-    print(f"Your score is {love_count}, you go together like coke and mentos.")
-elif love_count >=40 and love_count <= 50:
-    print(f"Your score is {love_count}, you are alright together")
-else: print(f"your score is {love_count}")
+# if love_count < 10 or love_count > 90:
+#     print(f"Your score is {love_count}, you go together like coke and mentos.")
+# elif love_count >=40 and love_count <= 50:
+#     print(f"Your score is {love_count}, you are alright together")
+# else: print(f"your score is {love_count}")
+
+print("Welcome to Treasure Island. \nYour mission is to find the treasure.")
+
+step1 = input("Which path do you want to take? left or right ").lower()
+
+if step1 == "left":
+    step2 = input("Do you want to swim or wait? Enter swim or wait  ").lower()
+    if step2 == "wait":
+        step3 = input("Which door do you wish to open? choose one color among red, blue, and yellow ").lower()
+        if step3 == "yellow":
+            print("You win!")
+        else: print("Game Over")
+    else: print("Game Over")
+else: print("Game Over")
+    
+
 
 
 
