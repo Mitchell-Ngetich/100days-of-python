@@ -204,12 +204,40 @@ if height >= 120:
     elif age <= 18:
         bill = 7
         print("pay $7")
-    else: 
-        bill = 12
+    elif age >= 45 and age <= 55 :
+        print("Free ride")
+    else:
+        bill = 12 
         print("pay $12")
-    
+      
     want_photo = input("Do you wany a photo taken? Y or N ")
     if want_photo == "Y":
         bill += 3
     print(f"Your final ${bill}")
 else: print("Sorry, you can't ride") 
+
+# print("Welcome to Python Pizza Deliveries!")
+# order = input("Do you want to order? Y or N ")
+# size = input("What size pizza do you want? S, M, or L ")
+# bill = 0
+
+
+# if order == "Y":
+#     if size == "S": 
+#         bill = 15
+#     elif size == "M":
+#         bill = 20
+#     elif size == "L":
+#         bill = 25
+    
+#     add_pepperoni = input("Do you want pepperoni? Y or N ")
+#     if add_pepperoni == "Y":
+#         if size == "S":
+#             bill += 2
+#         else: bill += 3
+    
+#     extra_cheese = input("Do you want extra cheese? Y or N ")
+#     if extra_cheese == "Y":
+#         bill += 1
+#     print(f"Your cheese is ${bill}")
+# else: print("No order was made")
