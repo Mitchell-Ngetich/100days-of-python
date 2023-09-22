@@ -174,22 +174,42 @@
 #     print(f"Your bmi is {bmi}, You are obese")
 # else: print(f"Your bmi is {bmi}, You are clinically obese")
 
-year = int(input("Which years do yo want to check? "))
+# year = int(input("Which years do yo want to check? "))
 
 # if year % 4 == 0:
 #     print("This is a leap year")
 # elif year % 100 == 0 and year % 400 == 0:
 #     print("This year is a leap year")
-# elif year % 4 == 0 and year % 100 != 0:
-#     print("This year is a leap year")
-# elif year % 100 == 0 and year % 400 != 0:
+# else:
 #     print("This year is not a leap year")
+
+ 
+# if year % 4 == 0:
+#     if year % 100 == 0:
+#         if year % 400 == 0:
+#             print("This year is a leap year")
+#         else: print("This year is not a leap year")
+#     else: print("This year is a leap year")
 # else: print("This year is not a leap year")
 
-if year % 4 == 0:
-    if year % 100 == 0:
-        if year % 400 == 0:
-            print("This year is a leap year")
-        else: print("This year is not a leap year")
-    else: print("This year is a leap year")
-else: print("This year is not a leap year")
+print("Welcome to the rollercoaster!")
+height = int(input("What is your height in cm? "))
+bill = 0
+
+if height >= 120:
+    age = int(input("What is your age? "))
+    if age < 12:
+        bill = 3
+        print("pay $3")
+    elif age <= 18:
+        bill = 7
+        print("pay $7")
+    else: 
+        bill = 12
+        print("pay $12")
+    
+    want_photo = input("Do you wany a photo taken? Y or N ")
+    if want_photo == "Y":
+        bill += 3
+    print(f"Your final ${bill}")
+else: print("Sorry, you can't ride") 
