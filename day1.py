@@ -376,68 +376,76 @@ import random
 #     print("Computer won")
 #     end_game = input("This repl has exited, Play again? ")
 
-import random
+# rock = '''
+#     _______
+# ---'   ____)
+#       (_____)
+#       (_____)
+#       (____)
+# ---.__(___)
+# '''
 
-rock = '''
-    _______
----'   ____)
-      (_____)
-      (_____)
-      (____)
----.__(___)
-'''
+# paper = '''
+#     _______
+# ---'   ____)____
+#           ______)
+#           _______)
+#          _______)
+# ---.__________)
+# '''
 
-paper = '''
-    _______
----'   ____)____
-          ______)
-          _______)
-         _______)
----.__________)
-'''
-
-scissors = '''
-    _______
----'   ____)____
-          ______)
-       __________)
-      (____)
----.__(___)
-'''
+# scissors = '''
+#     _______
+# ---'   ____)____
+#           ______)
+#        __________)
+#       (____)
+# ---.__(___)
+# '''
 
 # Create a list of choices with corresponding ASCII art
-choices = [rock, paper, scissors]
+# choices = [rock, paper, scissors]
 
 # Map choices to integers for user input
-choice_map = {
-    0: "Rock",
-    1: "Paper",
-    2: "Scissors"
-}
+# choice_map = {
+#     0: "Rock",
+#     1: "Paper",
+#     2: "Scissors"
+# }
 
-user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper, or 2 for Scissors: "))
-computer_choice = random.randint(0, 2)
+# user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper, or 2 for Scissors: "))
+# computer_choice = random.randint(0, 2)
 
-print("Your choice:")
-print(choices[user_choice])
-print("Computer's choice:")
-print(choices[computer_choice])
+# print("Your choice:")
+# print(choices[user_choice])
+# print("Computer's choice:")
+# print(choices[computer_choice])
 
-if user_choice == computer_choice:
-    print("It's a draw!")
-elif (user_choice == 0 and computer_choice == 2) or \
-     (user_choice == 1 and computer_choice == 0) or \
-     (user_choice == 2 and computer_choice == 1):
-    print(f"You win! {choice_map[user_choice]} beats {choice_map[computer_choice]}.")
-else:
-    print(f"You lose! {choice_map[computer_choice]} beats {choice_map[user_choice]}.")
+# if user_choice == computer_choice:
+#     print("It's a draw!")
+# elif (user_choice == 0 and computer_choice == 2) or \
+#      (user_choice == 1 and computer_choice == 0) or \
+#      (user_choice == 2 and computer_choice == 1):
+#     print(f"You win! {choice_map[user_choice]} beats {choice_map[computer_choice]}.")
+# else:
+#     print(f"You lose! {choice_map[computer_choice]} beats {choice_map[user_choice]}.")
 
-play_again = input("Do you want to play again? (yes/no): ")
-if play_again.lower() == "no":
-    print("Thanks for playing!")
+# play_again = input("Do you want to play again? (yes/no): ")
+# if play_again.lower() == "no":
+#     print("Thanks for playing!")
 
- 
-    
+student_heights = input("Input a list of student heights ").split()
+sum = 0
+for n in range(0, len(student_heights)):
+    student_heights[n] = int(student_heights[n])
+    sum += int(student_heights[n])
+average = round(sum / len(student_heights))
+
+print(average)
+
+
+# calculate the average and round to a whole number
+
 
 
 
