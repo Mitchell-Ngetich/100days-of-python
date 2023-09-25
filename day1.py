@@ -284,11 +284,26 @@ import random
 # my_num = random.uniform(10.0, 20.5)
 # print(my_num)
 
-random_num = random.randint(0, 1)
+# random_num = random.randint(0, 1)
 
-if random_num == 0:
-    print("Tails")
-else: print("Heads")
+# if random_num == 0:
+#     print("Tails")
+# else: print("Heads")
+
+# names_string = input("Give me everybody's names, seperated by a comma. ")
+# names = names_string.split(", ")
+# using choice method to generate random name in a list
+# random_name = random.choice(names) + " is going to buy the meal today!"
+# print(random_name)
+
+# we can also use random.randint(0, len(names - 1)) to generate random name too
+
+# name = len(names)
+# print(name)
+# random_per = random.randint(0, name - 1 ) 
+# print(random_per)
+# person_pay = names[random_per] + " will buy the meal today!"
+# print(person_pay)
     
 
 
