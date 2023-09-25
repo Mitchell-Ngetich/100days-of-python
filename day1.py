@@ -444,19 +444,32 @@ import random
 # print(average)
 
 
-student_scores = input("Input a list of student heights ").split()
-max_value = int(student_scores[0])
+# student_scores = input("Input a list of student heights ").split()
+# max_value = int(student_scores[0])
 
-for n in range(0, len(student_scores)):
-    student_scores[n] = int(student_scores[n])
+# for n in range(0, len(student_scores)):
+#     student_scores[n] = int(student_scores[n])
     
-for score in student_scores:
-    if score > max_value:
-        max_value = score
-# print the score outside the loop
-print(f"The highest score in the class is {max_value}")
+# for score in student_scores:
+#     if score > max_value:
+#         max_value = score
+# # print the score outside the loop
+# print(f"The highest score in the class is: {max_value}")
     
+    # add even numbers between 0 and 100, another way is using modulars
+# sum = 0
+# for number in range(0, 101, 2):
+#     sum += number
+# print(sum)
 
+for number in range(1, 101):
+    if number % 3 == 0 and number % 5 == 0:
+        print("FizzBuzz")
+    elif number % 3 == 0:
+        print("fizz")
+    elif number % 5 == 0:
+        print("Buzz")
+    else: print(number)
 
 
 
