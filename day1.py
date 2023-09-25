@@ -305,21 +305,138 @@ import random
 # person_pay = names[random_per] + " will buy the meal today!"
 # print(person_pay)
 
-row1 = ["◻️", "◻️", "◻️"]
-row2 = ["◻️", "◻️", "◻️"]
-row3 = ["◻️", "◻️", "◻️"]
-map = [row1, row2, row3]
-print(f"{row1} \n{row2} \n{row3}")
+# row1 = ["◻️", "◻️", "◻️"]
+# row2 = ["◻️", "◻️", "◻️"]
+# row3 = ["◻️", "◻️", "◻️"]
+# map = [row1, row2, row3]
+# print(f"{row1} \n{row2} \n{row3}")
 
-position = input("Where do you want to put the treasure? ")
+# position = input("Where do you want to put the treasure? ")
 
-x = int(position[0])
-y = int(position[1]) 
-map[x - 1][y- 1] = "X"
+# x = int(position[0])
+# y = int(position[1]) 
+# map[x - 1][y- 1] = "X"
 
-print(f"{row1} \n{row2} \n{row3}")
+# print(f"{row1} \n{row2} \n{row3}")
+# random_num = [
+# ''' 
+# _______
+# ---'   ____)
+#       (_____)
+#       (_____)
+#       (____)
+# ---.__(___)
+# ''',
+# '''
+#     _______
+# ---'   ____)____
+#           ______)
+#           _______)
+#          _______)
+# ---.__________)
+# ''',
+# '''
+#     _______
+# ---'   ____)____
+#           ______)
+#        __________)
+#       (____)
+# ---.__(___)
+# '''
+# ]
+# random_num[0] == 0
+# random_num[1] == 1
+# random_num[2] == 2
 
+# game = int(input("What do you choose? Type 0 for rock, 1 for Paper or 2 for Scissors "))
+# computer = random.choice(0, 2)
 
+# def my_function():
+#     print(random_num[0])
+#     print(f"You choose {0}: you win")
+#     print(random_num[2])
+#     print(f"Computer choose: {2}")
+
+# if game == random_num[0] and computer == random_num[2]:
+#     my_function()
+# elif game == random_num[2] and computer == random_num[1]:
+#     my_function()
+# elif game == random_num[1] and computer == random_num[0]:
+#     my_function()
+# elif int(computer) == game:
+#     print(computer)
+#     print(random_num(game))
+#     print("Draw")
+# elif game > 2 or game < 0:
+#     print("Invalid input, you lost")
+# else: 
+#     print(random_num[game])
+#     print("You lost")
+#     print(computer)
+#     print("Computer won")
+#     end_game = input("This repl has exited, Play again? ")
+
+import random
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+# Create a list of choices with corresponding ASCII art
+choices = [rock, paper, scissors]
+
+# Map choices to integers for user input
+choice_map = {
+    0: "Rock",
+    1: "Paper",
+    2: "Scissors"
+}
+
+user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper, or 2 for Scissors: "))
+computer_choice = random.randint(0, 2)
+
+print("Your choice:")
+print(choices[user_choice])
+print("Computer's choice:")
+print(choices[computer_choice])
+
+if user_choice == computer_choice:
+    print("It's a draw!")
+elif (user_choice == 0 and computer_choice == 2) or \
+     (user_choice == 1 and computer_choice == 0) or \
+     (user_choice == 2 and computer_choice == 1):
+    print(f"You win! {choice_map[user_choice]} beats {choice_map[computer_choice]}.")
+else:
+    print(f"You lose! {choice_map[computer_choice]} beats {choice_map[user_choice]}.")
+
+play_again = input("Do you want to play again? (yes/no): ")
+if play_again.lower() == "no":
+    print("Thanks for playing!")
+
+ 
     
 
 
