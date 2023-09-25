@@ -434,18 +434,28 @@ import random
 # if play_again.lower() == "no":
 #     print("Thanks for playing!")
 
-student_heights = input("Input a list of student heights ").split()
-sum = 0
-for n in range(0, len(student_heights)):
-    student_heights[n] = int(student_heights[n])
-    sum += int(student_heights[n])
-average = round(sum / len(student_heights))
+# student_heights = input("Input a list of student heights ").split()
+# sum = 0
+# for n in range(0, len(student_heights)):
+#     student_heights[n] = int(student_heights[n])
+#     sum += int(student_heights[n])
+# average = round(sum / len(student_heights))
 
-print(average)
+# print(average)
 
 
-# calculate the average and round to a whole number
+student_scores = input("Input a list of student heights ").split()
+max_value = int(student_scores[0])
 
+for n in range(0, len(student_scores)):
+    student_scores[n] = int(student_scores[n])
+    
+for score in student_scores:
+    if score > max_value:
+        max_value = score
+# print the score outside the loop
+print(f"The highest score in the class is {max_value}")
+    
 
 
 
