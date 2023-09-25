@@ -1,3 +1,4 @@
+import random
 # from math import *
 #  print("Hello" + " Mitch")
 
@@ -262,19 +263,32 @@
 #     print(f"Your score is {love_count}, you are alright together")
 # else: print(f"your score is {love_count}")
 
-print("Welcome to Treasure Island. \nYour mission is to find the treasure.")
+# print("Welcome to Treasure Island. \nYour mission is to find the treasure.")
 
-step1 = input("Which path do you want to take? left or right ").lower()
+# step1 = input("Which path do you want to take? Type 'left' or 'right' ").lower()
 
-if step1 == "left":
-    step2 = input("Do you want to swim or wait? Enter swim or wait  ").lower()
-    if step2 == "wait":
-        step3 = input("Which door do you wish to open? choose one color among red, blue, and yellow ").lower()
-        if step3 == "yellow":
-            print("You win!")
-        else: print("Game Over")
-    else: print("Game Over")
-else: print("Game Over")
+# if step1 == "left":
+#     step2 = input("Do you want to swim or wait? Enter swim or wait  ").lower()
+#     if step2 == "wait":
+#         step3 = input("Which door do you wish to open? choose one color among red, blue, and yellow ").lower()
+#         if step3 == "yellow":
+#             print("You win!")
+#         else: print("Game Over")
+#     else: print("Game Over")
+# else: print("Ooops! Game Over")
+
+# ran_integer = random.randint(10, 30)
+# print(ran_integer)
+# my_random = random.random()
+# print(my_random)
+# my_num = random.uniform(10.0, 20.5)
+# print(my_num)
+
+random_num = random.randint(0, 1)
+
+if random_num == 0:
+    print("Tails")
+else: print("Heads")
     
 
 
