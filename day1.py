@@ -498,8 +498,9 @@ for number in range(num_numbers):
    
 for symbol in range(num_symbols):
     password += random.choice(symbols)
-    random.shuffle(password)
-password = ''.join(password)
+random.shuffle(password)
+password = ''.join(password) #or set password to an empty string
+# then loop through the password then add using += 
 print(f"Here is your password: {password}")
 
 
