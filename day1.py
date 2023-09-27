@@ -1,8 +1,12 @@
 import random
+from hangman import steps, logo
+import module1
+from replit import clear
+
 # from math import *
 #  print("Hello" + " Mitch")
 
-# print("Day 1 - String Manipulation")  
+# print("Day 1 - String Manipulation")
 # print('String Conctenation is done with the "+" sign.')
 # print('e.g. print("hello" + "world")')
 # print("New lines can be created with a bcakslash and n.")
@@ -19,9 +23,9 @@ import random
 # print(main(name))
 
 # or you can use print(len(input()));
-# print(len(raw_input("what is your name? "))) 
+# print(len(raw_input("what is your name? ")))
 # use raw_input instead of input alone
-  
+
 # print("    /|")
 # print("   / |")
 # print("  /  |")
@@ -32,13 +36,13 @@ import random
 # characters_age = 40
 
 # print("There once was a man named " + character_name + ",")
-# print("he was " + str(characters_age) + " years old.") 
+# print("he was " + str(characters_age) + " years old.")
 # # you cannot concatenate string and integers in python
 # print("He really liked the name " + character_name)
-# print("but didn't like being " + str(characters_age) + " years old")  
+# print("but didn't like being " + str(characters_age) + " years old")
 
 # phrase = "Giraffe Academy"
-# print(phrase.replace("Giraffe", "Elephant")) 
+# print(phrase.replace("Giraffe", "Elephant"))
 
 # my_num = -5
 # print(sqrt(64))
@@ -106,7 +110,7 @@ import random
 # print(f"You have {days} days, {weeks} weeks, and {months} months left.")
 # two_digit = input("Type a two digit number: ")
 # print(int(two_digit[0]) + int(two_digit[1]))
-# print(type(two_digit)) => check if it is a string or an integer 
+# print(type(two_digit)) => check if it is a string or an integer
 
 
 # Functions
@@ -144,7 +148,7 @@ import random
 #     elif age >= 12 and age <= 18:
 #         print("Please pay $7.")
 #     else: print("Please pay $5.")
-# else: 
+# else:
 #     print("You cannot ride the rollercoaster")
 
 
@@ -184,7 +188,7 @@ import random
 # else:
 #     print("This year is not a leap year")
 
- 
+
 # if year % 4 == 0:
 #     if year % 100 == 0:
 #         if year % 400 == 0:
@@ -208,14 +212,14 @@ import random
 #     elif age >= 45 and age <= 55 :
 #         print("Free ride")
 #     else:
-#         bill = 12 
+#         bill = 12
 #         print("pay $12")
-      
+
 #     want_photo = input("Do you wany a photo taken? Y or N ")
 #     if want_photo == "Y":
 #         bill += 3
 #     print(f"Your final ${bill}")
-# else: print("Sorry, you can't ride") 
+# else: print("Sorry, you can't ride")
 
 # print("Welcome to Python Pizza Deliveries!")
 # order = input("Do you want to order? Y or N ")
@@ -224,19 +228,19 @@ import random
 
 
 # if order == "Y":
-#     if size == "S": 
+#     if size == "S":
 #         bill = 15
 #     elif size == "M":
 #         bill = 20
 #     elif size == "L":
 #         bill = 25
-    
+
 #     add_pepperoni = input("Do you want pepperoni? Y or N ")
 #     if add_pepperoni == "Y":
 #         if size == "S":
 #             bill += 2
 #         else: bill += 3
-    
+
 #     extra_cheese = input("Do you want extra cheese? Y or N ")
 #     if extra_cheese == "Y":
 #         bill += 1
@@ -249,7 +253,7 @@ import random
 # combined = name1 + name2
 
 # true = combined.count("t") + combined.count("r") + combined.count("u") + combined.count("e")
-# love = combined.count("l") + combined.count("0") + combined.count("v") + combined.count("e") 
+# love = combined.count("l") + combined.count("0") + combined.count("v") + combined.count("e")
 
 # print(true)
 # print(love)
@@ -300,7 +304,7 @@ import random
 
 # name = len(names)
 # print(name)
-# random_per = random.randint(0, name - 1 ) 
+# random_per = random.randint(0, name - 1 )
 # print(random_per)
 # person_pay = names[random_per] + " will buy the meal today!"
 # print(person_pay)
@@ -314,12 +318,12 @@ import random
 # position = input("Where do you want to put the treasure? ")
 
 # x = int(position[0])
-# y = int(position[1]) 
+# y = int(position[1])
 # map[x - 1][y- 1] = "X"
 
 # print(f"{row1} \n{row2} \n{row3}")
 # random_num = [
-# ''' 
+# '''
 # _______
 # ---'   ____)
 #       (_____)
@@ -369,7 +373,7 @@ import random
 #     print("Draw")
 # elif game > 2 or game < 0:
 #     print("Invalid input, you lost")
-# else: 
+# else:
 #     print(random_num[game])
 #     print("You lost")
 #     print(computer)
@@ -449,14 +453,14 @@ import random
 
 # for n in range(0, len(student_scores)):
 #     student_scores[n] = int(student_scores[n])
-    
+
 # for score in student_scores:
 #     if score > max_value:
 #         max_value = score
 # # print the score outside the loop
 # print(f"The highest score in the class is: {max_value}")
-    
-    # add even numbers between 0 and 100, another way is using modulars
+
+# add even numbers between 0 and 100, another way is using modulars
 # sum = 0
 # for number in range(0, 101, 2):
 #     sum += number
@@ -471,38 +475,75 @@ import random
 #         print("Buzz")
 #     else: print(number)
 
-# Password generator 
+# Password generator
 
-letters = ["a", "b", "c","d", "e","f", "g", "h", "i", "j", "k",
-        "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", 
-        "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", 
-        "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", 
-        "V", "W", "X", "Y", "Z"]
+# letters = ["a", "b", "c","d", "e","f", "g", "h", "i", "j", "k",
+#         "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w",
+#         "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I",
+#         "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U",
+#         "V", "W", "X", "Y", "Z"]
 
-numbers = ["0", '1', '2', '3', '4', '5', '6', '7', '8', '9']
-symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
-password = []
+# numbers = ["0", '1', '2', '3', '4', '5', '6', '7', '8', '9']
+# symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
+# password = []
 
-print("Welcome to my PyPassword Generator!")
-num_letters = int(input("How many letters would you like in your password?\n"))
-num_symbols = int(input("How many symbols would you like?\n"))
-num_numbers = int(input("How many numbers would you like?\n"))
+# print("Welcome to my PyPassword Generator!")
+# num_letters = int(input("How many letters would you like in your password?\n"))
+# num_symbols = int(input("How many symbols would you like?\n"))
+# num_numbers = int(input("How many numbers would you like?\n"))
 
-#Easy way
+# #Easy way
 
-for letter in range(num_letters): #or(1, num_letters + 1)
-    password += random.choice(letters)
+# for letter in range(num_letters): #or(1, num_letters + 1)
+#     password += random.choice(letters)
+
+# for number in range(num_numbers):
+#     password += random.choice(numbers)
+
+# for symbol in range(num_symbols):
+#     password += random.choice(symbols)
+# random.shuffle(password)
+# password = ''.join(password) #or set password to an empty string
+# # then loop through the password then add using +=
+# print(f"Here is your password: {password}")
+
+print(logo)
+lives = 6
+
+chosen_word = random.choice(module1.words)
+display = [] 
+print(chosen_word)
+
+for _ in range(len(chosen_word)):
+    display.append("_") 
     
-for number in range(num_numbers):
-    password += random.choice(numbers)
-   
-for symbol in range(num_symbols):
-    password += random.choice(symbols)
-random.shuffle(password)
-password = ''.join(password) #or set password to an empty string
-# then loop through the password then add using += 
-print(f"Here is your password: {password}")
+end_of_game = False
 
-
-
+while not end_of_game:
+    guess = input("Guess a letter: ").lower()
     
+    clear()
+    
+    if guess in display:
+        print(f"You have already guessed {guess}, guess a new one")
+
+    for position in range(len(chosen_word)): #use position coz the length will print a number.
+        letter = chosen_word[position]
+        # print(f"Current position: {position}\n Current letter: {letter}\n Guessed letter: {guess}")
+        if letter == guess:
+            display[position] = letter
+    print(" ".join(display))
+    
+    if guess not in chosen_word:
+        print(f"You guessed {guess}, which is not in the word. You lose a life")
+        lives -= 1
+        print(steps[lives])
+        if lives == 0:
+            end_of_game = True 
+            print(f"You've run out of guesses: You lose")
+
+    if "_" not in display:
+        end_of_game = True
+        print("You win")     
+print(" ".join(display)) #join into one word
+
