@@ -1,7 +1,7 @@
 import random
 from hangman import steps, logo
 import module1
-from replit import clear
+# from replit import clear
 
 # from math import *
 #  print("Hello" + " Mitch")
@@ -512,7 +512,6 @@ lives = 6
 
 chosen_word = random.choice(module1.words)
 display = [] 
-print(chosen_word)
 
 for _ in range(len(chosen_word)):
     display.append("_") 
@@ -521,9 +520,7 @@ end_of_game = False
 
 while not end_of_game:
     guess = input("Guess a letter: ").lower()
-    
-    clear()
-    
+
     if guess in display:
         print(f"You have already guessed {guess}, guess a new one")
 
@@ -544,6 +541,7 @@ while not end_of_game:
 
     if "_" not in display:
         end_of_game = True
-        print("You win")     
+        print("Bravo, You win")     
 print(" ".join(display)) #join into one word
+print(f"The word you are guessing is: {chosen_word}")
 
