@@ -1,6 +1,6 @@
 import random
-from hangman import steps, logo
-import module1
+# from hangman import steps, logo
+# import module1
 # from replit import clear
 
 # from math import *
@@ -507,41 +507,41 @@ import module1
 # # then loop through the password then add using +=
 # print(f"Here is your password: {password}")
 
-print(logo)
-lives = 6
+# print(logo)
+# lives = 6
 
-chosen_word = random.choice(module1.words)
-display = [] 
+# chosen_word = random.choice(module1.words)
+# display = [] 
 
-for _ in range(len(chosen_word)):
-    display.append("_") 
+# for _ in range(len(chosen_word)):
+#     display.append("_") 
     
-end_of_game = False
+# end_of_game = False
 
-while not end_of_game:
-    guess = input("Guess a letter: ").lower()
+# while not end_of_game:
+#     guess = input("Guess a letter: ").lower()
 
-    if guess in display:
-        print(f"You have already guessed {guess}, guess a new one")
+#     if guess in display:
+#         print(f"You have already guessed {guess}, guess a new one")
 
-    for position in range(len(chosen_word)): #use position coz the length will print a number.
-        letter = chosen_word[position]
-        # print(f"Current position: {position}\n Current letter: {letter}\n Guessed letter: {guess}")
-        if letter == guess:
-            display[position] = letter
-    print(" ".join(display))
+#     for position in range(len(chosen_word)): #use position coz the length will print a number.
+#         letter = chosen_word[position]
+#         # print(f"Current position: {position}\n Current letter: {letter}\n Guessed letter: {guess}")
+#         if letter == guess:
+#             display[position] = letter
+#     print(" ".join(display))
     
-    if guess not in chosen_word:
-        print(f"You guessed {guess}, which is not in the word. You lose a life")
-        lives -= 1
-        print(steps[lives])
-        if lives == 0:
-            end_of_game = True 
-            print(f"You've run out of guesses: You lose")
+#     if guess not in chosen_word:
+#         print(f"You guessed {guess}, which is not in the word. You lose a life")
+#         lives -= 1
+#         print(steps[lives])
+#         if lives == 0:
+#             end_of_game = True 
+#             print(f"You've run out of guesses: You lose")
 
-    if "_" not in display:
-        end_of_game = True
-        print("Bravo, You win")     
-print(" ".join(display)) #join into one word
-print(f"The word you are guessing is: {chosen_word}")
+#     if "_" not in display:
+#         end_of_game = True
+#         print("Bravo, You win")     
+# print(" ".join(display)) #join into one word
+# print(f"The word you are guessing is: {chosen_word}")
 
