@@ -45,13 +45,14 @@ def caeser(text, shift, direction):
             index = alphabets.index(letter)
             if direction == 'encode':
                 new_index = (index + shift) % len(alphabets)
-            elif direction == "decode": 
-                new_index = (index - shift) % len(alphabets)
+            else: new_index = (index - shift) % len(alphabets)
             plain_text.append(alphabets[new_index])  
         else: plain_text.append(letter)
+    final_text = "".join(plain_text)
+    print(f"Your {direction}d text is: {final_text}")
 caeser(text, shift, direction)
-final_text = "".join(plain_text)
-print(f"Your {direction} text is: {final_text}")
+
+
 
 # def decrypt(text, shift):
 #     for letter in text:
