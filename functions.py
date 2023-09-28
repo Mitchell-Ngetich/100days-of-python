@@ -1,5 +1,6 @@
 import random
 import math
+from cipher import logo
 
 # def greet_with(name, location):
 #     print(f"Hello {name}")
@@ -30,32 +31,41 @@ import math
     
 # prime_checker(number = n)
 
+# print(logo)
+
 alphabets = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 
             'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-# if direction != 'encode' and direction != 'decode': print("Invalid direction: try again!")
-text = input("Type your message: \n").lower()
-shift = int(input("Type the shift number:\n"))
-plain_text = []
-
 def caeser(text, shift, direction):
-    for letter in text:
-        if letter in alphabets:
-            index = alphabets.index(letter)
+    plain_text = []
+    for char in text:
+        if char in alphabets:
+            index = alphabets.index(char)
             if direction == 'encode':
                 new_index = (index + shift) % len(alphabets)
             else: new_index = (index - shift) % len(alphabets)
             plain_text.append(alphabets[new_index])  
-        else: plain_text.append(letter)
+        else: plain_text.append(char)
     final_text = "".join(plain_text)
     print(f"Your {direction}d text is: {final_text}")
-caeser(text, shift, direction)
+
+should_end = False
+while not should_end:
+    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+    text = input("Type your message:\n").lower()
+    shift = int(input("Type the shift number:\n"))
+    
+    caeser(text, shift, direction)
+    
+    result = input("Type 'yes' if you want to go again. Otherwise type 'no'.\n")
+    if result == "no":
+        should_end = True
+        print("Goodbye!")
 
 
 
 # def decrypt(text, shift):
-#     for letter in text:
+#     for char in text:
 #         index2 = alphabets.index(letter)
 #         index3 = (index2 - shift) % len(alphabets)
 #         plain_text += alphabets[index3]
