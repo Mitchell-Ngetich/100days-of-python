@@ -33,34 +33,34 @@ from cipher import logo
 
 # print(logo)
 
-alphabets = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 
-            'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+# alphabets = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 
+#             'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-def caeser(text, shift, direction):
-    plain_text = []
-    for char in text:
-        if char in alphabets:
-            index = alphabets.index(char)
-            if direction == 'encode':
-                new_index = (index + shift) % len(alphabets)
-            else: new_index = (index - shift) % len(alphabets)
-            plain_text.append(alphabets[new_index])  
-        else: plain_text.append(char)
-    final_text = "".join(plain_text)
-    print(f"Your {direction}d text is: {final_text}")
+# def caeser(text, shift, direction):
+#     plain_text = []
+#     for char in text:
+#         if char in alphabets:
+#             index = alphabets.index(char)
+#             if direction == 'encode':
+#                 new_index = (index + shift) % len(alphabets)
+#             else: new_index = (index - shift) % len(alphabets)
+#             plain_text.append(alphabets[new_index])  
+#         else: plain_text.append(char)
+#     final_text = "".join(plain_text)
+#     print(f"Your {direction}d text is: {final_text}")
 
-should_end = False
-while not should_end:
-    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-    text = input("Type your message:\n").lower()
-    shift = int(input("Type the shift number:\n"))
+# should_end = True
+# while should_end:
+#     direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+#     text = input("Type your message:\n").lower()
+#     shift = int(input("Type the shift number:\n"))
     
-    caeser(text, shift, direction)
+#     caeser(text, shift, direction)
     
-    result = input("Type 'yes' if you want to go again. Otherwise type 'no'.\n")
-    if result == "no":
-        should_end = True
-        print("Goodbye!")
+#     result = input("Type 'yes' if you want to go again. Otherwise type 'no'.\n")
+#     if result == "no":
+#         should_end = False
+#         print("Goodbye!")
 
 
 
