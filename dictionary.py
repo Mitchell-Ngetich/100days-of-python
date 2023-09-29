@@ -47,34 +47,34 @@
 
 # print(travel_log)
 
-import os
+# import os
 
-def clear_console():
-    os.system('cls' if os.name == 'nt' else 'clear')
+# def clear_console():
+#     os.system('cls' if os.name == 'nt' else 'clear')
 
-new_person = []
+# new_person = []
 
-def bid_game(name, price):
+# def bid_game(name, price):
    
-    new_entry = {"name": name, "price": price}
-    new_person.append(new_entry)
+#     new_entry = {"name": name, "price": price}
+#     new_person.append(new_entry)
 
-max_bid = 0
-winner_name = ""
-end_game = False
-while not end_game:
-    name = input("Enter your name ")
-    price = int(input("How much do you want to bid? $"))
-    bid_game(name, price)
+# max_bid = 0
+# winner_name = ""
+# end_game = False
+# while not end_game:
+#     name = input("Enter your name ")
+#     price = int(input("How much do you want to bid? $"))
+#     bid_game(name, price)
     
-    new_user = input("Are there any other bider? type 'yes' or 'no' ").lower()
-    if new_user == "yes":
-        clear_console()
-    elif new_user == "no":
-        for entry in new_person:
-            if entry["price"] > max_bid:
-                max_bid = entry["price"]
-                winner_name = entry["name"]
-        print(f"The winner of this bid occasion is {winner_name}, with a bid of ${max_bid}")
-        end_game = True
-print(new_person)  
+#     new_user = input("Are there any other bider? type 'yes' or 'no' ").lower()
+#     if new_user == "yes":
+#         clear_console()
+#     elif new_user == "no":
+#         for entry in new_person:
+#             if entry["price"] > max_bid:
+#                 max_bid = entry["price"]
+#                 winner_name = entry["name"]
+#         print(f"The winner of this bid occasion is {winner_name}, with a bid of ${max_bid}")
+#         end_game = True
+# print(new_person)  
