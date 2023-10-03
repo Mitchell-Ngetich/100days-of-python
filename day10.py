@@ -31,47 +31,48 @@ import random
 
 # calculator
 
-def add(n1, n2):
-    return n1 + n2
+# def add(n1, n2):
+#     return n1 + n2
 
-def subtract(n1, n2):
-    return n1 - n2
+# def subtract(n1, n2):
+#     return n1 - n2
 
-def multiply(n1, n2):
-    return n1 * n2
+# def multiply(n1, n2):
+#     return n1 * n2
 
-def divide(n1, n2):
-    return n1 / n2
+# def divide(n1, n2):
+#     return n1 / n2
 
-operations = {
-    "+":add,
-    "-":subtract,
-    "*":multiply,
-    "/":divide,
-}
-def calc():
-    num1 = float(input("What's the first number? "))
+# operations = {
+#     "+":add,
+#     "-":subtract,
+#     "*":multiply,
+#     "/":divide,
+# }
+# def calc():
+#     num1 = float(input("What's the first number? "))
 
-    for symbol in operations:
-        print(symbol)
+#     for symbol in operations:
+#         print(symbol)
         
-    is_calculator = False
-    while not is_calculator:
-        operation_symbol = input("Pick an operation : ")
-        num2 = float(input("What's the next number? "))
+#     is_calculator = False
+#     while not is_calculator:
+#         operation_symbol = input("Pick an operation : ")
+#         num2 = float(input("What's the next number? "))
 
-        if operation_symbol in operations:
-            calculation = operations[operation_symbol]
-            answer = calculation(num1, num2)
-            print(f"{num1} {operation_symbol} {num2} = {answer}") 
-            new_input =input(f"Type 'y' to continue calculating with {answer}, type 's' to start a new calculation or type 'n' to exit.:")
-            if new_input == 'y':
-                num1 = answer
-            elif new_input == 's':
-                is_calculator = True
-                calc()
-            else: 
-                is_calculator = True
-                print("Exiting....Goodbye!")
-        else: "Invalid choice"
-calc()
+#         if operation_symbol in operations:
+#             calculation = operations[operation_symbol]
+#             answer = calculation(num1, num2)
+#             print(f"{num1} {operation_symbol} {num2} = {answer}") 
+#             new_input =input(f"Type 'y' to continue calculating with {answer}, type 's' to start a new calculation or type 'n' to exit.:")
+#             if new_input == 'y':
+#                 num1 = answer
+#             elif new_input == 's':
+#                 is_calculator = True
+#                 calc()
+#             else: 
+#                 is_calculator = True
+#                 print("Exiting....Goodbye!")
+#         else: "Invalid choice"
+# calc()
+
