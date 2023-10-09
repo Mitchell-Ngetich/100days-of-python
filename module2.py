@@ -32,7 +32,7 @@ def guessing_game():
     count_hard = 5
     print("Welcome to the Number guessing game")
     print("I'm thinking of a number between 1 and 100")
-    user_input = input("Choose a difficulty. Type 'easy' or 'hard' ")
+    user_input = input("Choose a difficulty. Type 'easy' or 'hard': ")
     num_generated = random_num()
     while True:
         if user_input == "easy":
@@ -55,10 +55,10 @@ def guessing_game():
             print()
             break
         
-    final_input = input("Do you want to restart the game? Type 'yes' or 'no' ")
+    final_input = input("Do you want to restart the game? Type 'yes' or 'no': ")
     while final_input == "yes":
         clear_screen()
         guessing_game()
-        # final_input = input("Do you want to restart the game? Type 'yes' or 'no' ")
+
 
 guessing_game()
