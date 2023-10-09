@@ -159,87 +159,87 @@ from cipher import logo
 
 ##################### Hints #####################
     
-import os
-from art import logo 
+# import os
+# from art import logo 
 
-cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
-user_cards = []
-computer_cards = []
+# cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+# user_cards = []
+# computer_cards = []
 
-def clear_console():
-    os.system('cls' if os.name == 'nt' else 'clear')
+# def clear_console():
+#     os.system('cls' if os.name == 'nt' else 'clear')
     
-def random_cards():
-    random_cards = random.choice(cards)
-    return random_cards
+# def random_cards():
+#     random_cards = random.choice(cards)
+#     return random_cards
 
-def add_score(cards):
+# def add_score(cards):
     
-    if sum(cards) == 21 and len(cards) == 2:
-        return 0
+#     if sum(cards) == 21 and len(cards) == 2:
+#         return 0
 
-    if 11 in cards and sum(cards) > 21:
-        cards.remove(11)
-        cards.append(1)
-    return sum(cards)
+#     if 11 in cards and sum(cards) > 21:
+#         cards.remove(11)
+#         cards.append(1)
+#     return sum(cards)
 
 
-def compare(user_score, computer_score):
-    if user_score > 21 and computer_score > 21:
-        return "You went over. You lose"
+# def compare(user_score, computer_score):
+#     if user_score > 21 and computer_score > 21:
+#         return "You went over. You lose"
     
     
-    if user_score == computer_score:
-        return "Draw"
-    elif computer_score == 0:
-        return "Lose, opponent has Blackjack"
-    elif user_score == 0:
-        return "Win with a Blackjack"
-    elif user_score > 21:
-        return "You went over. You lose"
-    elif computer_score > 21:
-        return "Opponent went over. You win"
-    elif user_score > computer_score:
-        return "You win"
-    else:
-        return "You lose"
+#     if user_score == computer_score:
+#         return "Draw"
+#     elif computer_score == 0:
+#         return "Lose, opponent has Blackjack"
+#     elif user_score == 0:
+#         return "Win with a Blackjack"
+#     elif user_score > 21:
+#         return "You went over. You lose"
+#     elif computer_score > 21:
+#         return "Opponent went over. You win"
+#     elif user_score > computer_score:
+#         return "You win"
+#     else:
+#         return "You lose"
 
-def play_game():
+# def play_game():
     
-    print(logo)
+#     print(logo)
     
-    is_game_over = False
+#     is_game_over = False
 
-    for _ in range(2):
-        user_cards.append(random_cards())
-        computer_cards.append(random_cards())
+#     for _ in range(2):
+#         user_cards.append(random_cards())
+#         computer_cards.append(random_cards())
         
-    while not is_game_over:
-        user_score = add_score(user_cards)
-        computer_score = add_score(computer_cards)
+#     while not is_game_over:
+#         user_score = add_score(user_cards)
+#         computer_score = add_score(computer_cards)
 
-        print(f"Your cards: {user_cards}, current score: {user_score}")
-        print(f"Computer's first card: {computer_cards[0]}")
+#         print(f"Your cards: {user_cards}, current score: {user_score}")
+#         print(f"Computer's first card: {computer_cards[0]}")
 
-        if user_score == 0 or computer_score == 0 or user_score > 21:
-            is_game_over = True
-        else: 
-            user_should_deal = input("Type 'y' to get another card, type 'n' to pass: ")
-            if user_should_deal == 'y':
-                user_cards.append(random_cards())
-            else:
-                is_game_over = True
+#         if user_score == 0 or computer_score == 0 or user_score > 21:
+#             is_game_over = True
+#         else: 
+#             user_should_deal = input("Type 'y' to get another card, type 'n' to pass: ")
+#             if user_should_deal == 'y':
+#                 user_cards.append(random_cards())
+#             else:
+#                 is_game_over = True
                 
-    while computer_score != 0 and computer_score < 17:
-        computer_cards.append(random_cards())
-        computer_score = add_score(computer_cards)
+#     while computer_score != 0 and computer_score < 17:
+#         computer_cards.append(random_cards())
+#         computer_score = add_score(computer_cards)
 
-    print(f"Your final score: {user_cards}, final score: {user_score}")
-    print(f"Computer's final score: {computer_cards}, final score: {computer_score}")
-    print(compare(user_score, computer_score))
+#     print(f"Your final score: {user_cards}, final score: {user_score}")
+#     print(f"Computer's final score: {computer_cards}, final score: {computer_score}")
+#     print(compare(user_score, computer_score))
 
-while input("Do you wish to play a game of blackjack? (y/n) ") == "y": 
-    clear_console()
-    user_cards = []
-    computer_cards = []
-    play_game()
+# while input("Do you wish to play a game of blackjack? (y/n) ") == "y": 
+#     clear_console()
+#     user_cards = []
+#     computer_cards = []
+#     play_game()
