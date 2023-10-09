@@ -9,14 +9,13 @@ def clear_screen():
 
 def random_num():
     num_generated = random.randint(0, 100)
-    print(num_generated)
     return num_generated
 
 def condition_counter(num_generated, count):
     number = int(input("Make a guess: "))
     
     if number == num_generated:
-        print("Bravo!, you have guessed it correctly")
+        print("Bravo!, you got it The answer is {num_generated}}")
         return False # tells the program to stop running
     elif number > num_generated:
         print("Too high.")
